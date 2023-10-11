@@ -1,0 +1,1436 @@
+@font-face {
+	font-family: 'proxima_nova_rgregular';
+	src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot');
+	src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.woff') format('woff'),
+		 url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.ttf') format('truetype'),
+		 url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'proxima_nova_rgbold';
+	src: url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.eot');
+	src: url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.woff') format('woff'),
+		 url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.ttf') format('truetype'),
+		 url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'adelle_rgregular';
+	src: url('https://litmus.com/fonts/Emails/adelle_reg-webfont.eot');
+	src: url('https://litmus.com/fonts/Emails/adelle_reg-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('https://litmus.com/fonts/Emails/adelle_reg-webfont.woff') format('woff'),
+		 url('https://litmus.com/fonts/Emails/adelle_reg-webfont.ttf') format('truetype'),
+		 url('https://litmus.com/fonts/Emails/adelle_reg-webfont.svg#adelle_rgregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+body{
+	font-family: 'proxima_nova_rgregular';
+ 
+}
+.signIn{
+  cursor: pointer;
+}
+.signIn:hover{
+  font-size: 17px;
+}
+.smallScreen{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.selectors,.movieSelector{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+ 
+  width: 100%;
+  
+
+}
+
+.selectors{
+  padding: 20px 0;
+}
+
+/* App.css */
+.logo{
+  width: 120px;
+  height: 120px;
+}
+.logo img{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.movie-trailer:hover{
+  color: #000!important;
+}
+.sm-menu{
+  display: none;
+}
+.bg-menu{
+  display: flex;
+  gap: 30px;
+  font-size: 16px;
+  font-weight: 900;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.bg-menu span:hover{
+ color: #0e0e;
+}
+
+.fullHeight{
+
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(0, 0, 0, 0.7);
+
+
+height: auto;
+min-height: 100vh;
+}
+.background-image {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+ 
+  
+  
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+.controls{
+  margin: 10px 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.bottomNavigation{
+  margin: 10px 0;
+  width: 100%;
+  align-items: center;
+  justify-content: right;
+}
+.sm{
+  font-size: 16px !important;
+  margin-right: 5px;
+}
+.arrows{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.arrows svg{
+  height: 30px !important;
+  width: 30px !important;
+}
+.filters{
+  height: 20px!important;
+  width: 20px!important;
+margin-right: 5px;
+}
+
+.movieSelector div{
+  cursor: pointer;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.movieSelector div:hover{
+  border: 1px solid #000!important;
+  
+}
+.green{
+  color: #fff !important;
+}
+.reviewcontent{
+  max-width: 100vw;
+  word-break: break-all;
+}
+
+.movie-trailer{
+ 
+
+  cursor: pointer;
+  margin-top: 20px;
+
+
+
+  font-weight: 900;
+
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+.movie-trailer:hover{
+  border-color: #fff!important;
+  color: #000;
+  background-color: #fff!important;
+}
+
+.movieSelector div p{
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+.dropdown-container {
+
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+
+  margin-bottom: 10px;
+}
+
+.st{
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh!important;
+
+}
+.loading{
+  height: 80vh;
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+.fs .dropdown-container{
+  width: 300px;
+}
+select {
+  padding: 5px;
+  border: 1px solid #fff;
+  color: #fff;
+
+  background-color: #0000;
+}
+option{
+  background-color: #000 ! important; 
+}
+option:hover{
+  background-color: #fff;
+  color: #000;
+}
+.bgb{
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+}
+body{
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: #fff;
+  
+  background-color: #222;
+  height: 100vh;
+ 
+}
+
+.containment{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.label{
+  display: flex;
+  align-items: center;
+
+  font-size: 22px;
+  color: #fff;
+  
+}
+.label p{
+ font-size: 20px;
+
+}
+.movie-container {
+  
+
+
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+ 
+}
+.movie-container section {
+display: flex;
+
+
+}
+
+.movie-poster {
+  margin-right: 100px;
+  height: 500px;
+  width: 400px;
+  border-radius: 20%; /* Adjust border radius as needed */
+}
+.movie-poster>img{
+  border-radius: 20px; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.movie-details {
+  align-items: flex-start;
+  width: 600px;
+
+  padding: auto;
+  display: flex;
+  flex-direction: column;
+ height: 100%;
+}
+
+.movie-title {
+  margin-bottom: 10px;
+  font-size: 45px;
+ 
+  font-weight: bold;
+}
+
+.movie-description {
+  width: 600px;
+  font-size: 20px;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.tag-container {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  border-radius: 20px; /* Adjust border radius as needed */
+}
+
+.tag {
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: #0000; /* Background color for tags */
+  padding: 5px 10px;
+  border-radius: 40px; /* Adjust border radius as needed */
+}
+
+.movie-info {
+  display: flex;
+  align-items: center;
+  
+}
+.review-head,.review-message{
+  max-width: 60vw;
+}
+
+
+/* You can add more styling as needed for your ReviewItem component */
+
+.movie-year {
+  margin-right: 10px;
+}
+.user-collection-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-direction: column;
+}
+.movie-list-sidebar div,.left-navigation-bar div{
+  display: flex;
+  flex-direction: column;
+}
+.movie-rating {
+  font-weight: bold;
+  margin-right: 10px;
+}
+.MuiOutlinedInput-input{
+  color: #fff!important;
+}
+.MuiRating-iconEmpty{
+  color: #fff!important;
+}
+.dc{
+	font-family: 'proxima_nova_rgbold'!important;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  background-color: #222;
+}
+.dcmv{
+  font-family: 'proxima_nova_rgbold'!important;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  background-color: #222;
+}
+.dc span,.MuiTypography-h6{
+  font-family: 'proxima_nova_rgbold'!important;
+}
+
+@keyframes ldio-67vo9x8f3d-o {
+    0%    { opacity: 1; transform: translate(0 0) }
+   49.99% { opacity: 1; transform: translate(40px,0) }
+   50%    { opacity: 0; transform: translate(40px,0) }
+  100%    { opacity: 0; transform: translate(0,0) }
+}
+@keyframes ldio-67vo9x8f3d {
+    0% { transform: translate(0,0) }
+   50% { transform: translate(40px,0) }
+  100% { transform: translate(0,0) }
+}
+.ldio-67vo9x8f3d div {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: 30px;
+  left: 10px;
+}
+.ldio-67vo9x8f3d div:nth-child(1) {
+  background: #fff;
+  animation: ldio-67vo9x8f3d 1s linear infinite;
+  animation-delay: -0.5s;
+}
+.ldio-67vo9x8f3d div:nth-child(2) {
+  background: #000;
+  animation: ldio-67vo9x8f3d 1s linear infinite;
+  animation-delay: 0s;
+}
+.ldio-67vo9x8f3d div:nth-child(3) {
+  background: #fff;
+  animation: ldio-67vo9x8f3d-o 1s linear infinite;
+  animation-delay: -0.5s;
+}
+.loadingio-spinner-dual-ball-8b5q70g0vmv {
+  width: 44px;
+  height: 44px;
+  display: inline-block;
+  overflow: hidden;
+  background: none;
+}
+.ldio-67vo9x8f3d {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(0.44);
+  backface-visibility: hidden;
+  transform-origin: 0 0; /* see note above */
+}
+.ldio-67vo9x8f3d div { box-sizing: content-box; }
+.botnav{
+
+
+ 
+  
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+ padding: 10px 0;;
+}
+.botnav section{
+  width: 80vw;
+  max-height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contained {
+  
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+  border: 2px solid #fff;
+
+  
+  border-radius: 30px;
+  
+
+
+}
+
+.content {
+  
+ width:40px;
+  height: 40px;
+  border: 1px solid #fff; /* Add a border if desired */
+  margin:  0;
+}
+.one{
+  display:flex;
+
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #fff;
+ 
+  width: 40px;
+ 
+   border-radius: 50%;
+}
+.two{
+    display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+   color: #fff;
+
+  border: 0px;
+}
+.three{
+    display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+   color: #fff;
+
+  border: 0px;
+}
+.fa{
+  font-size: 35px;
+}
+.fa:hover{
+  font-size: 40px;
+}
+.fa{
+  cursor: pointer;
+}
+.alt{
+  width: 80px;
+  border:0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:14px;
+  color: #fff;
+  font-weight: bold;
+}
+.username-Field,.password-Field{
+  display: flex;
+  flex-direction: column;
+
+}
+.signIn-div {
+  background-image:
+  linear-gradient(to bottom, rgba(1, 1, 1, 0.52), rgba(49, 43, 48, 0.73)),
+  url('images/bg.jpg');
+ 
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signIn-container {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signIn-div label {
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.dc input[type="checkbox"]{
+  border: 1px solid #fff;
+}
+.dc img{
+  width: 50px;
+  height: 100px;
+}
+
+.signIn-div input[type="text"],
+.signIn-div input[type="password"] {
+  width: 300px;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: transparent;
+  color: white;
+}
+.dc input[type="text"]{
+  width: 250px;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: #fff;
+  color: #222;
+}
+.review-container{
+  width: 100%;
+  display: flex;
+ 
+}
+.signIn-div [type="text"]:focus,
+.signIn-div [type="password"]:focus {
+  outline: none;
+}
+
+.a {
+  color: white;
+  text-decoration: none;
+}
+.MuiContainer-root{
+  padding-top: 0!important;
+}
+
+.a:hover {
+  color: green;
+}
+.collectionBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signInbutton ,.collectionBtn{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: padding 0.3s;
+}
+.MuiMenu-paper{
+  background-color: #222!important;
+  color: #fff!important;
+}
+.signIn-div img{
+width:  150px;
+  height: auto;
+}
+.signInbutton:hover {
+  color: green;
+  border: 1px solid green; /* Increase padding on hover */
+}
+.review{
+  display: flex;
+  margin: 10px 0;
+  flex-direction: column;
+  font-family: 'proxima_nova_rgregular';
+  max-width: 100%;
+}
+.review p{
+  max-width: 100%;
+  word-wrap: break-word;
+}
+.review-head{
+  font-size: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 5px;
+
+}
+
+.review-content{
+  font-size: 16px;
+}
+.dcmv .review-message{
+max-width: 250px;;
+}
+.user-collection-page{
+  overflow-x: hidden;
+}
+.user-collection-page select{
+  text-transform: capitalize;
+  width: 200px;
+  height: 40px;
+  
+}
+.user-collection-page h2{
+font-size: 16px;
+text-transform: capitalize;
+}
+.colcontrol{
+  display: flex;
+  flex-direction: row!important;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.colcontrol div,.noc div{
+  cursor: pointer;
+  border: 1px solid #fff;
+  min-width: 200px;
+  width: auto;
+  padding: 0 5px;
+  
+  height: 40px;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+}
+.colcontrol div:hover{
+  border: 1px solid #0e0e;
+  color: #0e0e;
+}
+.user-collection-page .review-head{
+  margin: 5px 0;
+  font-size: 14px;
+}
+.user-collection-page .review-message{
+  font-size: 20px;
+}
+.user-collection-page .review{
+  padding: 20px 0;
+}
+.user-collection-page .review{
+  width: 100%;
+}
+
+@media screen  and (max-height: 768px) {
+  body{
+    overflow-y: auto;
+  }
+.background-image{
+height: auto;
+min-height: 100vh;
+}
+}
+
+@media screen and (max-width: 1300px) {
+ 
+  
+  
+  .movie-info p{
+    font-size: 14px;
+   
+   
+  }
+  .movie-details {
+   
+    width: 450px;
+  
+   
+  }
+  .movie-poster{
+    margin-right: 150px;}
+
+  
+  .movie-description {
+    width: 450px;
+    
+    max-width: 450px;
+    
+  }
+
+.movie-title{
+  font-size: 30px;
+}
+.movie-description, .user-collection-page .review-message{
+  font-size: 16px;
+}
+}
+@media screen and (max-width: 1080px) {
+  .botnav section{
+    width: 90vw;
+  }
+
+  
+  .sm-menu{
+    display: contents;
+  }
+  .bg-menu{
+    display: none;
+  }
+  .movie-container section{
+    margin: 40px 0;
+  }
+  .movie-poster{
+    margin-right: 100px;
+    height: 450px;
+    width: 300px;
+
+  }
+
+}
+@media screen and (max-width: 900px) {
+
+  .movie-description {
+    width: 600px;
+    max-width: 600px;
+  }
+  .bottomNavigation{
+    display: none;
+  }
+  .controls{
+    display: none;
+  }
+  .selectors{
+    gap: 5px;
+  }
+  .smallScreen{
+    display: flex;
+  }
+  
+  .botnav section{
+   margin: 0 5px;
+  }
+  
+  .loading{
+    height: 90vh;}
+    .background-image{
+      min-height: 100vh;
+      height: auto;
+    }
+
+  body{
+    
+  
+    overflow-y: scroll;
+  }
+  .movie-container section{
+    flex-direction: column;
+   
+  }
+  .movie-poster{
+    min-width: 100%;
+  }
+  .movie-poster{
+    height: 300px;
+    width: 100%;
+    border-radius: 0%;
+    margin: 10px 0;
+   
+  }
+  .movie-poster img{
+    border-radius: 0%;
+  }
+  
+  
+  .movie-description,.movie-details {
+    width: 100%;
+    max-width: 100%;
+
+    
+  }
+  .fullHeight{
+    padding: 20px 0;
+  }
+  .movie-container section,.review-container{
+    margin: 10px 20px;
+  }
+ 
+ .review-message{
+  width: 98vw;
+  max-width: 100vw;
+}
+}
+
+@media screen and (max-width: 600px) {
+  .search-container {
+    flex-direction: column;
+  }
+
+  .search-field {
+    width: 100%!important;
+    padding: 10px 0!important;
+  }
+
+  .botnav section{
+    width: 100%;
+  }
+ 
+  
+  .movie-list-sidebar,.left-navigation-bar{
+    width: 85vw;
+    padding: 10px 20px;
+  }
+
+  .movie-poster{
+    height: 300px;
+    width: 100%;
+    border-radius: 0%;
+    margin: 10px 0;
+   
+  }
+  .movie-poster img{
+    border-radius: 0%;
+  }
+  .botnav{
+    margin-top: 0;
+  }
+  
+  .movie-description,.movie-details {
+    width: 100%;
+    max-width: 100%;
+
+    
+  }
+  .fullHeight{
+    padding: 0;
+  }
+  .movie-title{
+    font-size: 45px;
+  }
+  .movie-description{
+    font-size: 20px;
+  }
+  .user-collection-page select{
+   
+    width: 100%;
+  }
+  .colcontrol{
+    flex-direction: column!important;
+  }
+  .colcontrol div{
+    width: 100%;
+  }
+ 
+  .movie-container section{
+    margin: 10px 20px;
+  }
+  .background-image{
+    min-height: 100vh;
+    height: auto;
+   
+    background-color: #000;
+  }
+  #root,body,html{
+    height: 100%;
+    overflow-y: auto;
+  }
+  .st{
+    height: 100vh;
+  }
+  
+  }
+  @media screen and (max-width: 500px) {
+  
+    .movie-info{
+      display: flex;
+      flex-direction: column;
+      align-items: normal;
+    }
+    
+   
+  
+    
+  
+ 
+    .movie-title{
+      font-size: 35px;
+    }
+    .movie-description,.user-collection-page .review-message{
+      font-size: 16px;
+    }
+    .selectors{
+      flex-direction: column;
+    
+ 
+      justify-content:initial;
+
+    }
+ 
+    .dropdown-container{
+      margin: 0 10px;
+    }
+   
+    
+    }
+  
+    @media screen and (max-width: 400px) {
+      .fullHeight{
+        padding: 5px 0;
+      }
+     
+      .movie-container{
+        display: block;
+     
+        justify-self: normal;
+      }
+  
+      .selectors{
+        flex-direction: column;
+      
+   
+        justify-content:initial;
+
+      }
+   
+   
+      .movie-title{
+        font-size: 30px;
+      }
+      .movie-description{
+        font-size: 16px;
+      }
+     
+      .fullHeight {
+        padding: 5px;
+      }
+      .tag-container{
+        margin-bottom: 10px;
+
+      }
+      .movie-description {
+       
+        margin-bottom: 10px;
+        
+      }
+      .movie-trailer {
+        margin-top: 10px;
+      }
+
+      }
+      @media screen and (max-width: 300px) {
+       
+        .fullHeight {
+          padding: 5px;
+        }
+      
+        .dropdown-container{
+          margin: 0 10px;
+        }
+        .selectors{
+          flex-direction: column;
+        
+     
+          justify-content:initial;
+
+        }
+        .tag-container{
+          margin-bottom: 10px;
+
+        }
+        .background-image {
+          height: auto;
+        }
+        .st {
+          height: 100vh;
+        }
+        .movie-description {
+        
+          margin-bottom: 10px;
+          
+        }
+        #root,body{
+        overflow-y: scroll;
+     
+        }
+        .movie-title{
+          font-size: 24px;
+        }
+        #root,body,html{
+          height: 100%!important;
+          width: 100%;
+        }
+
+      }
+      @media screen and (max-height: 1280px) {
+        #root{
+          height: 100vh;
+        }
+      }
+      @media screen and (min-width: 1280px) and (max-width: 1300px) and (min-height: 800px) and (max-height: 820px) {
+        #root, body, html {
+          height: 100vh!important;
+      }
+        .movie-poster {
+          height: 450px;
+        }
+        .movie-poster{
+          margin-right: 100px;}
+      }
+      /* Media query for Google Nest Hub */
+@media screen and (min-width: 960px) and (max-width: 1280px) and (min-height: 480px) and (max-height: 800px) {
+  .movie-poster{
+    width: 250px;
+    height: 300px;
+  }
+  .background-image{
+    height: auto;
+    min-height: 100vh;
+  }
+}
+@media screen and (max-height: 500px){
+  body,#root{
+    overflow-y: scroll;
+
+  }
+.background-image{
+  height: auto;
+}
+}
+
+    
+  
+      @media screen and (min-width: 375px) and (max-width: 400px) and (min-height: 667px) and (max-height: 700px) {
+        .movie-title {
+          font-size: 24px;
+      }
+        #root,body{
+          overflow-y: scroll;
+        }
+        .background-image {
+          height: auto;
+        }
+        .st {
+          height: 100vh;
+        }
+        .movie-trailer{
+          margin-top: 5px;
+          margin-bottom: 5px;
+        }
+        .tag-container, .movie-description  {
+          margin-bottom: 5px;}
+        #root,body,html{
+          height: 100%!important;
+          width: 100%;
+        }
+      }
+      @media screen and (min-width: 768px) and (max-width: 800px) and (min-height: 1024px) and (max-height: 1080px) {
+
+  body{
+    overflow: auto;
+  }
+      }
+      @media screen and (min-width: 800px) and (max-width: 900px) and (min-height: 1080px) and (max-height: 1280px) {
+
+        .background-image{
+          height: 100%;
+        }
+        body{
+          overflow: auto;
+        }
+
+            }
+      @media only screen and (min-device-width: 820px) and (max-device-height: 1180px) and (-webkit-min-device-pixel-ratio: 1.5)  and (orientation: landscape) and (hover: none) {
+        .movie-title{
+          font-size: 45px;
+        }
+        .movie-info p {
+          font-size: 20px;
+      }
+        .movie-description{
+          font-size: 24px;
+        }
+        #root, body, html {
+          height: 100%;
+        }
+        .loading {
+          height: 90vh;
+        }
+        body {
+          overflow-y: scroll;
+        }
+      
+        .background-image{
+          height: auto;
+        }
+        .movie-container section {
+          flex-direction: column;
+      
+        }
+        .movie-poster {
+          min-width: 100%;
+          width: 100%;
+        }
+        .movie-details {
+      
+          width: 800px;
+        
+         
+        }
+        .movie-poster{
+          height: 500px;
+          width: 100%;
+          border-radius: 0%;
+          margin: 10px 0;
+         
+        }
+        .movie-poster img{
+          border-radius: 0%;
+        }
+        
+        
+        .movie-description {
+          width: 800px;
+          
+          max-width: 800px;
+          
+        }
+      }
+      
+      /* Portrait*/
+      @media only screen and (min-device-width: 820px) and (max-device-height: 1180px) and (-webkit-min-device-pixel-ratio: 1.5)  and (orientation: portrait) and (hover: none) {
+        .movie-title{
+          font-size: 45px;
+        }
+        .movie-info p {
+          font-size: 20px;
+      }
+        .movie-description{
+          font-size: 24px;
+        }
+        #root, body, html {
+          height: 100%;
+        }
+        .loading {
+          height: 90vh;
+        }
+       
+      
+        .movie-container section {
+          flex-direction: column;
+      
+        }
+        .movie-poster {
+          min-width: 100%;
+          width: 100%;
+        }
+        .movie-details {
+      
+          width: 800px;
+        
+         
+        }
+        .movie-poster{
+          height: 500px;
+          width: 100%;
+          border-radius: 0%;
+          margin: 10px 0;
+         
+        }
+        .movie-poster img{
+          border-radius: 0%;
+        }
+        
+        
+        .movie-description {
+          width: 800px;
+          
+          max-width: 800px;
+          
+        }
+      }
+        
+      
+@media only screen and (min-device-width: 1366px) and (max-device-height: 1024px) and (min-device-height: 1000px) and (-webkit-min-device-pixel-ratio: 1.5)  and (orientation: landscape) and (hover: none) {
+  .movie-title{
+    font-size: 45px;
+  }
+ 
+  .movie-info p {
+    font-size: 20px;
+}
+  .movie-description{
+    font-size: 24px;
+  }
+  #root, body, html {
+    height: 100vh;
+  }
+  .loading {
+    height: 90vh;
+  }
+  body {
+    overflow-y: auto;
+  }
+  .background-image{
+    height: 100vh;
+  }
+
+  .movie-container section {
+    flex-direction: column;
+
+  }
+  .movie-poster {
+    min-width: 100%;
+    width: 100%;
+  }
+  .movie-details {
+
+    width: 800px;
+  
+   
+  }
+  .movie-poster{
+    height: 500px;
+    width: 100%;
+    border-radius: 0%;
+    margin: 10px 0;
+   
+  }
+  .movie-poster img{
+    border-radius: 0%;
+  }
+  
+  
+  .movie-description {
+    width: 800px;
+    
+    max-width: 800px;
+    
+  }
+}
+
+/* Portrait*/
+@media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (min-device-height: 1000px)  and (-webkit-min-device-pixel-ratio: 1.5)  and (orientation: portrait) and (hover: none) {
+  .movie-title{
+    font-size: 45px;
+  }
+  .movie-info p {
+    font-size: 20px;
+}
+  .movie-description{
+    font-size: 24px;
+  }
+  #root, body, html {
+    height: 100vh;
+  }
+  .loading {
+    height: 90vh;
+  }
+  body {
+    overflow-y: auto;
+  }
+
+  .movie-container section {
+    flex-direction: column;
+
+  }
+  .movie-poster {
+    min-width: 100%;
+    width: 100%;
+  }
+  .movie-details {
+
+    width: 800px;
+  
+   
+  }
+  .movie-poster{
+    height: 500px;
+    width: 100%;
+    border-radius: 0%;
+    margin: 10px 0;
+   
+  }
+  .movie-poster img{
+    border-radius: 0%;
+  }
+  
+  
+  .movie-description {
+    width: 800px;
+    
+    max-width: 800px;
+    
+  }
+}
+  
+      @media screen and (min-width: 912px) and (max-width: 1080px) and (min-height: 1360px) and (max-height: 1600px) {
+        .movie-title{
+          font-size: 45px;
+        }
+        .movie-info p {
+          font-size: 20px;
+      }
+        .movie-description{
+          font-size: 24px;
+        }
+        #root, body, html {
+          height: 100%;
+        }
+        .loading {
+          height: 90vh;
+        }
+        body {
+          overflow-y: auto;
+        }
+      
+        .movie-container section {
+          flex-direction: column;
+
+        }
+        .movie-poster {
+          min-width: 100%;
+          width: 100%;
+        }
+        .movie-details {
+   
+          width: 800px;
+        
+         
+        }
+        .movie-poster{
+          height: 500px;
+          width: 100%;
+          border-radius: 0%;
+          margin: 10px 0;
+         
+        }
+        .movie-poster img{
+          border-radius: 0%;
+        }
+        
+        
+        .movie-description {
+          width: 800px;
+          
+          max-width: 800px;
+          
+        }
+      }
+      
+      @media screen and (min-width: 540px) and (max-width: 600px) and (min-height: 720px) and (max-height: 900px) {
+        body,#root,html{
+        overflow-y: scroll;}
+        #root,body,html{
+          height: 100%!important;
+          width: 100%;
+        }
+        .background-image{
+          height: auto;
+        }
+        .st{
+          height: 100vh;
+        }
+      }
