@@ -49,7 +49,7 @@ export default function MovieReviewDialog({ movies,colors,movieIndex,color,setRe
   const TOKEN = localStorage.getItem('token');
   const fetchReviews = async (func,mov) => {
     try {
-      const response = await fetch(`https://movieappapi.vercel.app/reviews/${mov.id}`, {
+      const response = await fetch(`https://weak-jade-salmon-ring.cyclic.app/reviews/${mov.id}`, {
         headers: { 'Authorization': `${TOKEN}` },
       });
       console.log(mov)
