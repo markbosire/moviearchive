@@ -55,7 +55,7 @@ const ReviewPage = () => {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    axios.get('https://movieappapi.vercel.app/reviews', {
+    axios.get('https://weak-jade-salmon-ring.cyclic.app/reviews', {
       headers: { Authorization: `${token}` }
     })
     .then(response => {
