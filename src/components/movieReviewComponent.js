@@ -44,7 +44,7 @@ const RatingTextField = styled(TextField)(({ theme }) => ({
     const [score, setScore] = useState(0); // Add this line
     const handleSubmit = async () => {
         try {
-          const response = await fetch('https://movieappapi.vercel.app/reviews', {
+          const response = await fetch('https://weak-jade-salmon-ring.cyclic.app/reviews', {
             method: 'POST',
             headers: { 'Authorization': `${TOKEN}`,'Content-Type': 'application/json' },
             body: JSON.stringify({ content: reviewText, movieId: movieId ,score: score }), // Update this line
