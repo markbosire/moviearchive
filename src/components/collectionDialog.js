@@ -21,7 +21,7 @@ const CollectionDialog = ({movieid,colors,movieIndex,color,collection,setCollect
   useEffect(() => {
     console.log(TOKEN)
   
-    axios.get('https://movieappapi.vercel.app/collections', {
+    axios.get('https://weak-jade-salmon-ring.cyclic.app/collections', {
       headers: {
         Authorization: `${TOKEN}`,
       },
@@ -57,7 +57,7 @@ const CollectionDialog = ({movieid,colors,movieIndex,color,collection,setCollect
       setSnackbarOpen(true);
     } else {
       // Make the Axios POST request
-      axios.post('https://movieappapi.vercel.app/collections', { name: newCollectionName }, {
+      axios.post('https://weak-jade-salmon-ring.cyclic.app/collections', { name: newCollectionName }, {
         headers: {
           Authorization: `${TOKEN}`,
         },
@@ -82,7 +82,7 @@ const CollectionDialog = ({movieid,colors,movieIndex,color,collection,setCollect
 
   const handleSaveToCollection = () => {
     selectedCollections.forEach((collectionId) => {
-      axios.post(`https://movieappapi.vercel.app/collections/${collectionId}/movies`,
+      axios.post(`https://weak-jade-salmon-ring.cyclic.app/collections/${collectionId}/movies`,
       {movieId: movieid},{
         
         headers: {
