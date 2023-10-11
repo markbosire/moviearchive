@@ -10,7 +10,7 @@ const MovieListSidebar = ({ selectedCollectionId, setSelectedMovieId , selectedM
 
 // Create an Axios instance with default headers
 const axiosInstance = axios.create({
-  baseURL: 'https://movieappapi.vercel.app/', // Replace with your API base URL
+  baseURL: 'https://weak-jade-salmon-ring.cyclic.app/', // Replace with your API base URL
   headers: {
     'Authorization': `${authToken}`,
     'Content-Type': 'application/json', // Adjust the content type as needed
