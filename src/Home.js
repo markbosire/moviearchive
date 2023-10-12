@@ -269,30 +269,45 @@ const Home = () => {
   
     let collectedMovies = [];
   
-    while (collectedMovies.length < 3) {
-      try {
-        let page = Math.floor(Math.random() * 100) + 1;
-  
-       const response = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=7bbc16b08ec7ccb42b7d7b4c5b289bdf&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&primary_release_date.gte=${eraStart}&primary_release_date.lte=${eraEnd}&${getRatingFilter(selectedRatingRange)}&with_genres=${selectedGenre}`);
+ let page = 1;
+let allFilteredMovies = [];
 
-        if (!response.ok) {
-          // Handle API error here, you can log an error message or throw an exception
-          throw new Error(`Failed to fetch data. Status: ${response.status}`);
-        }
-  
-        const data = await response.json();
-  
-        let filteredMovies = data.results.filter(movie => {
-          let releaseDate = new Date(movie.release_date);
-          return releaseDate.getMonth() + 1 === parseInt(month) && releaseDate.getDate() === parseInt(day) && movie.backdrop_path && movie.poster_path;
-        });
-  
-        collectedMovies = collectedMovies.concat(filteredMovies);
-  
-        if (collectedMovies.length < 3) {
-          // If we still have fewer than 3 movies, continue the loop
-          continue;
-        }
+while (allFilteredMovies.length < 20) {
+    const response = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=7bbc16b08ec7ccb42b7d7b4c5b289bdf&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&primary_release_date.gte=${eraStart}&primary_release_date.lte=${eraEnd}&${getRatingFilter(selectedRatingRange)}&with_genres=${selectedGenre}`);
+
+    if (!response.ok) {
+        throw new Error(`Failed to fetch data. Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    let filteredMovies = data.results.filter(movie => {
+        let releaseDate = new Date(movie.release_date);
+        return releaseDate.getMonth() + 1 === parseInt(month) && releaseDate.getDate() === parseInt(day) && movie.backdrop_path && movie.poster_path;
+    });
+
+    allFilteredMovies = allFilteredMovies.concat(filteredMovies);
+
+    // Increment the page number for the next iteration
+    page++;
+}
+
+// Function to shuffle an array
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];  // Swap elements
+    }
+}
+
+// Shuffle allFilteredMovies
+shuffle(allFilteredMovies);
+
+// Select the first three movies
+for (let i = 0; i < 3; i++) {
+    collectedMovies.push(allFilteredMovies[i]);
+}
+
   
         // If we have collected 3 or more movies, stop the loop and set the state
       // Inside fetchMovies
