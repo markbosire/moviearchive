@@ -977,6 +977,11 @@ min-height: 100vh;
     }
   
     @media screen and (max-width: 400px) {
+	    .signIn-div input[type="text"],
+.signIn-div input[type="password"] {
+  width: 250px;
+
+}
       .fullHeight{
         padding: 5px 0;
       }
