@@ -24,8 +24,8 @@ const Home = () => {
   const open = Boolean(anchorEl);
   const [collectionOpen,setCollectionOpen]= useState(false)
   const [isopen, setOpen] = React.useState(false);
-  const [selectedGenre, setSelectedGenre] = useState(27);
-  const [displayedGenre,setDisplayedGenre] =useState(27);
+  const [selectedGenre, setSelectedGenre] = useState(35);
+  const [displayedGenre,setDisplayedGenre] =useState(35);
 
   const handleGenreChange = (e) => {
    
@@ -141,11 +141,11 @@ const Home = () => {
   const [oneSrc,setOneSrc]= useState("");
   const [movies, setMovies] = useState([]);
   const [movieIndex, setMovieIndex] = useState(0);
-  const [era, setEra] = useState('1980s');
-  const [month, setMonth] = useState('10');
+  const [era, setEra] = useState('2020s');
+  const [month, setMonth] = useState('07');
   const [location, navigate] = useLocation();
 
-  const [day, setDay] = useState('12');
+  const [day, setDay] = useState('21');
   const [selectedRatingRange, setSelectedRatingRange] = useState('all'); // Initialize with 'all'
   const [backgroundImage, setBackgroundImage] = useState([]);
   const [movieLoading,setMovieLoading]=useState(true)
